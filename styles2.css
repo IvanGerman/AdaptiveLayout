@@ -226,9 +226,11 @@ section {
 }
 
 @media (max-width: 414px) {
-  .header-row, .photo-section, .project-section {
-     
-     
+  .header-row, .photo-section, .project-section  { 
     grid-template-columns: 100%;
-}
+  }
+  .screenshot {
+    width: 30%;
+    justify-self: center;
+  }
 }
