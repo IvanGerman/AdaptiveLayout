@@ -11,6 +11,9 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
+  color: #000000;
+  font-size: 1rem;
 }
 
 ul,
@@ -27,12 +30,13 @@ img {
 
 html,
 body {
+  min-width: 100vw;
   height: 100%;
   line-height: 1;
   font-size: 16px;  
   /* all em/rem are depending now on 16px */
   background-color:  #f4ece6;
-  color: rgb(204, 38, 38);
+  color: #000000;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
@@ -43,7 +47,13 @@ body {
 
 /* --------------------------------------------------------------------------------------------------------- */
 
+h1 {
+  font-size: 1.5rem;
+}
 
+p, li {
+  font-family: monospace;
+}
 
 .container {
   max-width: 1200px;
@@ -53,8 +63,9 @@ body {
 }
 
 .header {
-  min-height: 200px;
+  min-height: 8rem;
   border: 1px solid #000000;
+  background-color: #e6dace;
 }
 
 .header-row {
@@ -63,7 +74,7 @@ body {
   grid-template-columns: 30% 70%;
   
 }
-.name, header-menu {
+.name, .header-menu {
   width: 100%;
   height: 100%;
   border: 1px solid #000000;
@@ -72,9 +83,18 @@ body {
   align-items: center;
 }
 
+
+
 .menu-list {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  justify-content: space-around;
+}
+
+.menu-list li {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 
@@ -95,6 +115,7 @@ section {
 .photo-section {
   display: grid;
   grid-template-columns: 30% 70%;
+  
 }
 
 .photo, introduction {
@@ -108,7 +129,7 @@ section {
   margin: auto;
 }
 
-.photo {
+.photo, .introduction {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -117,7 +138,11 @@ section {
 .introduction {
   text-align: center;
   margin: 1rem;
-  font-size: 2em;
+  font-size: 1.5rem;
+  width: 50%;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  justify-self: center;
 }
 
 /* ---------------------- */
@@ -134,9 +159,17 @@ section {
   display: grid;
   grid-template-columns: 70% 30%;
 }
+
+.describtion {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .screenshot img {
-  max-width: 20vw;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ---------------------- */
@@ -177,4 +210,25 @@ section {
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
   align-items: center;
+  padding-left: 1rem;
+}
+
+
+/*Media Query------------------------------------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+  html,body {
+      font-size: 10px;
+  }
+  a {
+    font-size: 1 rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .header-row, .photo-section, .project-section {
+     
+     
+    grid-template-columns: 100%;
+}
 }
