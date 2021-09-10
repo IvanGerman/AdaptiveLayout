@@ -12,8 +12,6 @@
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #000000;
-  font-size: 1rem;
 }
 
 ul,
@@ -48,15 +46,33 @@ body {
 /* --------------------------------------------------------------------------------------------------------- */
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
+}
+
+h2 {
+  font-size: 1.7rem;
 }
 
 p, li {
   font-family: monospace;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
+li {
+  font-size: 1.5rem;
+}
+
+a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #64503c;
+}
+
 section {
-  margin-top: 6rem;
+  margin-top: 9rem;
 
 }
 
@@ -66,6 +82,8 @@ section {
   margin: 0px auto;
   
 }
+
+/*Header----------------------------------------------------------------------------------------------- */
 
 .header {
   min-height: 8rem;
@@ -155,7 +173,8 @@ section {
 
 .project-section {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 50% 50%;
+  
 }
 
 .describtion {
@@ -165,9 +184,12 @@ section {
 }
 
 .screenshot img {
-  width: 100%;
-  height: 100%;
+  width: 100%; 
   object-fit: cover;
+}
+
+#project-descr-p {
+  font-size: 1.2rem;
 }
 
 /* ---------------------- */
@@ -179,7 +201,7 @@ section {
 }
 
 .code-div img {
-  max-width: 20vw;
+  max-width: 50vw;
   margin: auto;
 }
 
@@ -199,6 +221,21 @@ section {
   align-items: center;
 }
 
+/*styles for several sections/divs---------------------- */
+
+.skills-div ul, .education-div ul, .contacts-div ul {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height:210%
+}
+
+.code-div h2, .education-div h2 {
+  margin-bottom: 3rem;
+}
+
+.education-div h3 {
+  margin-top: 2rem;
+}
 
 /*Footer------------------------------------------------------------------------------------------------ */
 
